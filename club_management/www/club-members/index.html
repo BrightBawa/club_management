@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% include "templates/includes/clubs/styles.html" %}
+<section class="clubs-site">
+  <div class="clubs-hero">
+    <h1>Club Members</h1>
+  </div>
+  <div class="clubs-grid">
+    {% for member in members %}
+    <article class="clubs-card">
+      <h3><a href="/{{ member.route }}">{{ member.public_name }}</a></h3>
+      <p class="clubs-meta">{{ member.program or "" }}{% if member.student_group %} · {{ member.student_group }}{% endif %}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

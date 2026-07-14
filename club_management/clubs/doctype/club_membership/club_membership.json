@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "club",
+  "member_profile",
+  "academic_year",
+  "academic_term",
+  "membership_type",
+  "position",
+  "date_joined",
+  "date_exited",
+  "application_status",
+  "membership_status",
+  "is_current"
+ ],
+ "fields": [
+  {
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Club",
+   "options": "School Club",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member_profile",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member Profile",
+   "options": "Club Member Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term"
+  },
+  {
+   "fieldname": "membership_type",
+   "fieldtype": "Select",
+   "label": "Membership Type",
+   "options": "\nGeneral Member\nExecutive\nCommittee"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "date_joined",
+   "fieldtype": "Date",
+   "label": "Date Joined"
+  },
+  {
+   "fieldname": "date_exited",
+   "fieldtype": "Date",
+   "label": "Date Exited"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "label": "Application Status",
+   "options": "\nDraft\nPending Approval\nApproved\nRejected"
+  },
+  {
+   "default": "Active",
+   "fieldname": "membership_status",
+   "fieldtype": "Select",
+   "label": "Membership Status",
+   "options": "\nApplicant\nActive\nInactive\nSuspended\nCompleted\nWithdrawn\nRejected"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_current",
+   "fieldtype": "Check",
+   "label": "Current Membership"
+  }
+ ],
+ "module": "Clubs",
+ "name": "Club Membership",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Clubs Manager"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Club Administrator"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Club Patron"
+  },
+  {
+   "read": 1,
+   "role": "Clubs Viewer"
+  }
+ ],
+ "search_fields": "club,member_profile,academic_year,academic_term",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "member_profile",
+ "track_changes": 1
+}

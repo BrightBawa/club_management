@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "public_name",
+  "photograph",
+  "clubs_supervised",
+  "biography",
+  "relevant_skills",
+  "contact_visibility",
+  "slug",
+  "route",
+  "publish_patron_profile",
+  "profile_status",
+  "published_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "public_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Public Name"
+  },
+  {
+   "fieldname": "photograph",
+   "fieldtype": "Attach Image",
+   "label": "Photograph"
+  },
+  {
+   "fieldname": "clubs_supervised",
+   "fieldtype": "Small Text",
+   "label": "Clubs Supervised"
+  },
+  {
+   "fieldname": "biography",
+   "fieldtype": "Text Editor",
+   "label": "Biography"
+  },
+  {
+   "fieldname": "relevant_skills",
+   "fieldtype": "Small Text",
+   "label": "Relevant Skills"
+  },
+  {
+   "default": "Internal",
+   "fieldname": "contact_visibility",
+   "fieldtype": "Select",
+   "label": "Contact Visibility",
+   "options": "\nHidden\nInternal\nPublic"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Slug",
+   "unique": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "publish_patron_profile",
+   "fieldtype": "Check",
+   "label": "Publish Patron Profile"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "profile_status",
+   "fieldtype": "Select",
+   "label": "Profile Status",
+   "options": "\nDraft\nPublished\nUnpublished"
+  },
+  {
+   "fieldname": "published_on",
+   "fieldtype": "Datetime",
+   "label": "Published On",
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "photograph",
+ "is_published_field": "publish_patron_profile",
+ "module": "Clubs",
+ "name": "Club Patron Profile",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Clubs Manager"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Club Administrator"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Club Patron"
+  },
+  {
+   "read": 1,
+   "role": "Clubs Viewer"
+  }
+ ],
+ "search_fields": "employee,public_name,clubs_supervised",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "public_name",
+ "track_changes": 1
+}

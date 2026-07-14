@@ -1,0 +1,102 @@
+{
+ "doctype": "Workspace",
+ "label": "Clubs",
+ "module": "Clubs",
+ "name": "Clubs",
+ "title": "Clubs",
+ "public": 1,
+ "icon": "users",
+ "content": "[{\"id\":\"clubs_header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Clubs & Activities</b></span>\",\"col\":12}},{\"id\":\"clubs_settings\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Settings\",\"col\":3}},{\"id\":\"clubs_category\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Category\",\"col\":3}},{\"id\":\"clubs_club\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"School Club\",\"col\":3}},{\"id\":\"clubs_member\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Member Profile\",\"col\":3}},{\"id\":\"clubs_patron\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Patron Profile\",\"col\":3}},{\"id\":\"clubs_membership\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Membership\",\"col\":3}}]",
+ "links": [
+  {
+   "label": "Club Settings",
+   "link_to": "Club Settings",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Club Category",
+   "link_to": "Club Category",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "School Club",
+   "link_to": "School Club",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Club Member Profile",
+   "link_to": "Club Member Profile",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Club Patron Profile",
+   "link_to": "Club Patron Profile",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Club Membership",
+   "link_to": "Club Membership",
+   "link_type": "DocType",
+   "type": "Link"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Clubs Manager"
+  },
+  {
+   "role": "Club Administrator"
+  },
+  {
+   "role": "Club Patron"
+  },
+  {
+   "role": "Clubs Viewer"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "shortcuts": [
+  {
+   "label": "Club Settings",
+   "link_to": "Club Settings",
+   "type": "DocType"
+  },
+  {
+   "label": "Club Category",
+   "link_to": "Club Category",
+   "type": "DocType"
+  },
+  {
+   "label": "School Club",
+   "link_to": "School Club",
+   "type": "DocType"
+  },
+  {
+   "label": "Club Member Profile",
+   "link_to": "Club Member Profile",
+   "type": "DocType"
+  },
+  {
+   "label": "Club Patron Profile",
+   "link_to": "Club Patron Profile",
+   "type": "DocType"
+  },
+  {
+   "label": "Club Membership",
+   "link_to": "Club Membership",
+   "type": "DocType"
+  }
+ ],
+ "charts": [],
+ "number_cards": [],
+ "quick_lists": [],
+ "custom_blocks": [],
+ "type": "Workspace"
+}

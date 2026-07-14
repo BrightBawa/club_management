@@ -1,0 +1,12 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% include "templates/includes/clubs/styles.html" %}
+<section class="clubs-site">
+  <div class="clubs-hero">
+    <h1>{{ doc.club_name }}</h1>
+    <p class="clubs-meta">{{ doc.club_category or "" }}{% if doc.campus %} · {{ doc.campus }}{% endif %}</p>
+    {% if doc.description %}<div>{{ doc.description }}</div>{% endif %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% include "templates/includes/clubs/styles.html" %}
+<section class="clubs-site">
+  <div class="clubs-hero">
+    <h1>Clubs & Activities</h1>
+    <p>Published clubs, member profiles, and patron profiles.</p>
+  </div>
+
+  {% if clubs %}
+  <div class="clubs-grid">
+    {% for club in clubs %}
+    <article class="clubs-card">
+      <h3><a href="/{{ club.route }}">{{ club.club_name }}</a></h3>
+      <p class="clubs-meta">{{ club.club_category or "" }}</p>
+      {% if club.description %}<p>{{ club.description | striptags | truncate(180) }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>No clubs are published yet.</p>
+  {% endif %}
+</section>
+{% endblock %}

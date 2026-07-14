@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_academic_year",
+  "default_term",
+  "membership_application_enabled",
+  "membership_approval_required",
+  "maximum_clubs_per_student",
+  "public_member_profiles_enabled",
+  "patron_approval_required",
+  "event_approval_required",
+  "default_club_route"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_academic_year",
+   "fieldtype": "Link",
+   "label": "Default Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "default_term",
+   "fieldtype": "Link",
+   "label": "Default Academic Term",
+   "options": "Academic Term"
+  },
+  {
+   "default": "1",
+   "fieldname": "membership_application_enabled",
+   "fieldtype": "Check",
+   "label": "Membership Application Enabled"
+  },
+  {
+   "default": "1",
+   "fieldname": "membership_approval_required",
+   "fieldtype": "Check",
+   "label": "Membership Approval Required"
+  },
+  {
+   "fieldname": "maximum_clubs_per_student",
+   "fieldtype": "Int",
+   "label": "Maximum Clubs per Student"
+  },
+  {
+   "default": "0",
+   "fieldname": "public_member_profiles_enabled",
+   "fieldtype": "Check",
+   "label": "Public Member Profiles Enabled"
+  },
+  {
+   "default": "1",
+   "fieldname": "patron_approval_required",
+   "fieldtype": "Check",
+   "label": "Patron Approval Required"
+  },
+  {
+   "default": "1",
+   "fieldname": "event_approval_required",
+   "fieldtype": "Check",
+   "label": "Event Approval Required"
+  },
+  {
+   "default": "clubs",
+   "fieldname": "default_club_route",
+   "fieldtype": "Data",
+   "label": "Default Club Route"
+  }
+ ],
+ "issingle": 1,
+ "module": "Clubs",
+ "name": "Club Settings",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Clubs Manager"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Club Administrator"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

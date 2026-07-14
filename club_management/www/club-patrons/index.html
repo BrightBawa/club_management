@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% include "templates/includes/clubs/styles.html" %}
+<section class="clubs-site">
+  <div class="clubs-hero">
+    <h1>Club Patrons</h1>
+  </div>
+  <div class="clubs-grid">
+    {% for patron in patrons %}
+    <article class="clubs-card">
+      <h3><a href="/{{ patron.route }}">{{ patron.public_name }}</a></h3>
+      <p class="clubs-meta">{{ patron.clubs_supervised or "" }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
