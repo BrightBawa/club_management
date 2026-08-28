@@ -1,48 +1,120 @@
 {
+ "app": "club_management",
+ "charts": [
+  {
+   "chart_name": "Clubs by Academic Year",
+   "label": "Clubs by Academic Year"
+  },
+  {
+   "chart_name": "Memberships by Academic Year",
+   "label": "Memberships by Academic Year"
+  },
+  {
+   "chart_name": "Club Membership Status",
+   "label": "Club Membership Status"
+  }
+ ],
+ "content": "[{\"id\": \"clubs_dashboard\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Clubs Dashboard\", \"col\": 3}}, {\"id\": \"clubs_snapshot\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Live Snapshot</b></span>\", \"col\": 12}}, {\"id\": \"card_0\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active School Clubs\", \"col\": 3}}, {\"id\": \"card_1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Club Memberships\", \"col\": 3}}, {\"id\": \"card_2\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Club Applications\", \"col\": 3}}, {\"id\": \"card_3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Published Club Profiles\", \"col\": 3}}, {\"id\": \"chart_0\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Clubs by Academic Year\", \"col\": 6}}, {\"id\": \"chart_1\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Memberships by Academic Year\", \"col\": 6}}, {\"id\": \"chart_2\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Club Membership Status\", \"col\": 6}}, {\"id\": \"clubs_header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Clubs & Activities</b></span>\", \"col\": 12}}, {\"id\": \"clubs_settings\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Club Settings\", \"col\": 3}}, {\"id\": \"clubs_category\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Club Category\", \"col\": 3}}, {\"id\": \"clubs_club\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Club\", \"col\": 3}}, {\"id\": \"clubs_member\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Club Member Profile\", \"col\": 3}}, {\"id\": \"clubs_patron\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Club Patron Profile\", \"col\": 3}}, {\"id\": \"clubs_membership\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Club Membership\", \"col\": 3}}]",
+ "creation": "2026-07-17 06:36:49.176490",
+ "custom_blocks": [],
+ "docstatus": 0,
  "doctype": "Workspace",
- "label": "Clubs",
- "module": "Clubs",
- "name": "Clubs",
- "title": "Clubs",
- "public": 1,
+ "hide_custom": 0,
  "icon": "users",
- "content": "[{\"id\":\"clubs_header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Clubs & Activities</b></span>\",\"col\":12}},{\"id\":\"clubs_settings\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Settings\",\"col\":3}},{\"id\":\"clubs_category\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Category\",\"col\":3}},{\"id\":\"clubs_club\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"School Club\",\"col\":3}},{\"id\":\"clubs_member\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Member Profile\",\"col\":3}},{\"id\":\"clubs_patron\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Patron Profile\",\"col\":3}},{\"id\":\"clubs_membership\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Club Membership\",\"col\":3}}]",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Clubs",
  "links": [
   {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Club Settings",
+   "link_count": 0,
    "link_to": "Club Settings",
    "link_type": "DocType",
+   "onboard": 0,
    "type": "Link"
   },
   {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Club Category",
+   "link_count": 0,
    "link_to": "Club Category",
    "link_type": "DocType",
+   "onboard": 0,
    "type": "Link"
   },
   {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "School Club",
+   "link_count": 0,
    "link_to": "School Club",
    "link_type": "DocType",
+   "onboard": 0,
    "type": "Link"
   },
   {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Club Member Profile",
+   "link_count": 0,
    "link_to": "Club Member Profile",
    "link_type": "DocType",
+   "onboard": 0,
    "type": "Link"
   },
   {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Club Patron Profile",
+   "link_count": 0,
    "link_to": "Club Patron Profile",
    "link_type": "DocType",
+   "onboard": 0,
    "type": "Link"
   },
   {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Club Membership",
+   "link_count": 0,
    "link_to": "Club Membership",
    "link_type": "DocType",
+   "onboard": 0,
    "type": "Link"
+  }
+ ],
+ "modified": "2026-07-17 07:26:48.993707",
+ "modified_by": "Administrator",
+ "module": "Clubs",
+ "name": "Clubs",
+ "number_cards": [
+  {
+   "label": "Active School Clubs",
+   "number_card_name": "Active School Clubs"
+  },
+  {
+   "label": "Active Club Memberships",
+   "number_card_name": "Active Club Memberships"
+  },
+  {
+   "label": "Pending Club Applications",
+   "number_card_name": "Pending Club Applications"
+  },
+  {
+   "label": "Published Club Profiles",
+   "number_card_name": "Published Club Profiles"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Club Membership",
+   "label": "Pending Club Applications",
+   "quick_list_filter": "{\"application_status\": [\"=\", \"Pending Approval\"]}"
   }
  ],
  "roles": [
@@ -62,11 +134,19 @@
    "role": "System Manager"
   }
  ],
+ "sequence_id": 0.0,
  "shortcuts": [
   {
    "label": "Club Settings",
    "link_to": "Club Settings",
    "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Clubs Dashboard",
+   "link_to": "Clubs Dashboard",
+   "type": "Dashboard"
   },
   {
    "label": "Club Category",
@@ -94,9 +174,6 @@
    "type": "DocType"
   }
  ],
- "charts": [],
- "number_cards": [],
- "quick_lists": [],
- "custom_blocks": [],
+ "title": "Clubs",
  "type": "Workspace"
 }
