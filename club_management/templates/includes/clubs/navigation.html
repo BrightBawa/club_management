@@ -1,0 +1,5 @@
+<nav class="clubs-nav" aria-label="{{ _('Clubs navigation') }}">
+  <a href="/clubs"{% if directory == 'clubs' %} aria-current="page"{% endif %}>{{ _("Clubs & activities") }}</a>
+  {% if show_patron_directory %}<a href="/club-patrons"{% if directory == 'patrons' %} aria-current="page"{% endif %}>{{ _("Patrons") }}</a>{% endif %}
+  {% if member_profiles_enabled %}<a href="/club-members"{% if directory == 'members' %} aria-current="page"{% endif %}>{{ _("Members") }}</a>{% endif %}
+</nav>

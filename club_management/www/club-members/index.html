@@ -1,18 +1,31 @@
-{% extends "templates/web.html" %}
+{% extends "templates/clubs_web.html" %}
 
 {% block page_content %}
-{% include "templates/includes/clubs/styles.html" %}
-<section class="clubs-site">
-  <div class="clubs-hero">
-    <h1>Club Members</h1>
-  </div>
+<section class="clubs-site" aria-labelledby="club-members-title">
+  <header class="clubs-header">
+    <p class="clubs-eyebrow">{{ _("GCIHS Clubs & Activities") }}</p>
+    <h1 id="club-members-title">{{ _("Club members") }}</h1>
+    <p>{{ _("Celebrating our students' interests, contributions, and achievements.") }}</p>
+  </header>
+  {% set directory = 'members' %}
+  {% include "templates/includes/clubs/navigation.html" %}
+  {% if members %}
   <div class="clubs-grid">
     {% for member in members %}
     <article class="clubs-card">
-      <h3><a href="/{{ member.route }}">{{ member.public_name }}</a></h3>
-      <p class="clubs-meta">{{ member.program or "" }}{% if member.student_group %} · {{ member.student_group }}{% endif %}</p>
+      {% if member.profile_photo %}<img class="clubs-card-photo" src="{{ member.profile_photo |e }}" alt="" loading="lazy" decoding="async">{% endif %}
+      <h2><a href="/{{ member.route |e }}">{{ member.public_name |e }}</a></h2>
+      {% if member.program %}<p class="clubs-meta">{{ member.program |e }}</p>{% endif %}
+      {% if member.student_group %}<p class="clubs-meta">{{ member.student_group |e }}</p>{% endif %}
+      <a class="clubs-card-action" href="/{{ member.route |e }}">{{ _("View profile") }} &rarr;</a>
     </article>
     {% endfor %}
   </div>
+  {% else %}
+  <section class="clubs-empty">
+    <h2>{{ _("Member profiles will appear here") }}</h2>
+    <p>{{ _("Discover our club community as member profiles become available.") }}</p>
+  </section>
+  {% endif %}
 </section>
 {% endblock %}

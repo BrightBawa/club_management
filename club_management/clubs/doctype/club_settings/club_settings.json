@@ -8,10 +8,14 @@
   "membership_application_enabled",
   "membership_approval_required",
   "maximum_clubs_per_student",
-  "public_member_profiles_enabled",
   "patron_approval_required",
   "event_approval_required",
-  "default_club_route"
+  "default_club_route",
+  "website_section",
+  "website_introduction",
+  "club_formation_message",
+  "show_patron_directory",
+  "public_member_profiles_enabled"
  ],
  "fields": [
   {
@@ -47,7 +51,8 @@
    "default": "0",
    "fieldname": "public_member_profiles_enabled",
    "fieldtype": "Check",
-   "label": "Public Member Profiles Enabled"
+   "label": "Public Member Profiles Enabled",
+   "description": "Allow published member profiles and the member directory on the public website. Each member must also have public profile visibility and explicit publication enabled."
   },
   {
    "default": "1",
@@ -66,6 +71,30 @@
    "fieldname": "default_club_route",
    "fieldtype": "Data",
    "label": "Default Club Route"
+  },
+  {
+   "fieldname": "website_section",
+   "fieldtype": "Section Break",
+   "label": "Clubs Website"
+  },
+  {
+   "fieldname": "website_introduction",
+   "fieldtype": "Small Text",
+   "label": "Website Introduction",
+   "default": "Explore opportunities to develop interests, talents, leadership, and service through school clubs and activities."
+  },
+  {
+   "fieldname": "club_formation_message",
+   "fieldtype": "Small Text",
+   "label": "Club Formation Message",
+   "default": "Club formation is pending. Approved clubs and activities will appear here once they are ready.",
+   "description": "Shown on the clubs website while no active club profiles are published."
+  },
+  {
+   "fieldname": "show_patron_directory",
+   "fieldtype": "Check",
+   "label": "Show Patron Directory on Clubs Website",
+   "default": "1"
   }
  ],
  "issingle": 1,

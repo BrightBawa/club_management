@@ -1,0 +1,12 @@
+{% extends "templates/web.html" %}
+
+{% block style %}
+{{ super() }}
+{{ include_style("/assets/club_management/css/clubs_public.css?v=20261014-2") }}
+{% endblock %}
+
+{% block content %}
+<div class="clubs-page-content">
+  {{ super() }}
+</div>
+{% endblock %}

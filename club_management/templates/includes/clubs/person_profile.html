@@ -1,0 +1,31 @@
+<article class="clubs-site" aria-labelledby="club-person-name">
+  <a class="clubs-back" href="{{ directory_route |e }}">&larr; {{ directory_label |e }}</a>
+  <header class="clubs-profile-header{% if not profile_photo %} clubs-without-photo{% endif %}">
+    {% if profile_photo %}<img class="clubs-portrait" src="{{ profile_photo |e }}" alt="{{ doc.public_name |e }}" fetchpriority="high" decoding="async">{% endif %}
+    <div>
+      <p class="clubs-eyebrow">{{ _("GCIHS Clubs & Activities") }}</p>
+      <h1 id="club-person-name">{{ doc.public_name |e }}</h1>
+      <p class="clubs-role">{{ (designation or profile_label) |e }}</p>
+    </div>
+  </header>
+  {% include "templates/includes/clubs/public_details.html" %}
+  {% if doc.biography %}
+  <section class="clubs-panel" aria-labelledby="club-biography-title">
+    <h2 id="club-biography-title">{{ _("Biography") }}</h2>
+    <div class="clubs-rich-text">{{ doc.biography }}</div>
+  </section>
+  {% endif %}
+  {% if clubs %}
+  <section class="clubs-related" aria-labelledby="related-clubs-title">
+    <h2 id="related-clubs-title">{{ _("Clubs") }}</h2>
+    <div class="clubs-grid">
+      {% for club in clubs %}
+      <article class="clubs-card">
+        <h3><a href="/{{ club.route |e }}">{{ club.club_name |e }}</a></h3>
+        {% if club.position %}<p class="clubs-meta">{{ club.position |e }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>

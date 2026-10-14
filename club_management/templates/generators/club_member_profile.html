@@ -1,12 +1,8 @@
-{% extends "templates/web.html" %}
+{% extends "templates/clubs_web.html" %}
 
 {% block page_content %}
-{% include "templates/includes/clubs/styles.html" %}
-<section class="clubs-site">
-  <div class="clubs-hero">
-    <h1>{{ doc.public_name }}</h1>
-    <p class="clubs-meta">{{ doc.program or "" }}{% if doc.student_group %} · {{ doc.student_group }}{% endif %}</p>
-    {% if doc.biography %}<div>{{ doc.biography }}</div>{% endif %}
-  </div>
-</section>
+{% set directory_route = '/club-members' %}
+{% set directory_label = _('All members') %}
+{% set profile_label = _('Club member') %}
+{% include "templates/includes/clubs/person_profile.html" %}
 {% endblock %}

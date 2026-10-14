@@ -21,6 +21,31 @@
   "logo",
   "cover_photo",
   "max_membership",
+  "additional_details_section",
+  "club_motto",
+  "activities_summary",
+  "achievements_summary",
+  "membership_requirements",
+  "website_display_section",
+  "show_club_category",
+  "show_campus",
+  "show_logo",
+  "show_cover_photo",
+  "show_mission",
+  "show_objectives",
+  "show_club_motto",
+  "show_activities_summary",
+  "show_achievements_summary",
+  "website_options_column",
+  "show_membership_requirements",
+  "show_meeting_venue",
+  "show_meeting_schedule",
+  "show_academic_year",
+  "show_max_membership",
+  "show_patron",
+  "show_student_president",
+  "show_members",
+  "publication_settings_section",
   "slug",
   "route",
   "status",
@@ -99,12 +124,16 @@
   {
    "fieldname": "logo",
    "fieldtype": "Attach Image",
-   "label": "Logo"
+   "label": "Logo",
+   "make_attachment_public": 1,
+   "description": "Use a public image and tick its option under Website Display Options to display it on the published profile."
   },
   {
    "fieldname": "cover_photo",
    "fieldtype": "Attach Image",
-   "label": "Cover Photo"
+   "label": "Cover Photo",
+   "make_attachment_public": 1,
+   "description": "Use a public image and tick its option under Website Display Options to display it on the published profile."
   },
   {
    "fieldname": "max_membership",
@@ -130,7 +159,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nDraft\nActive\nInactive"
+   "options": "\nDraft\nActive\nInactive",
+   "description": "Use Draft while the club is being formed. Only Active clubs can be published on the website."
   },
   {
    "default": "0",
@@ -150,6 +180,150 @@
    "fieldtype": "Datetime",
    "label": "Published On",
    "read_only": 1
+  },
+  {
+   "fieldname": "additional_details_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Profile Details",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "club_motto",
+   "label": "Club Motto",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "activities_summary",
+   "label": "Activities and Projects",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "achievements_summary",
+   "label": "Club Achievements",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "membership_requirements",
+   "label": "Membership Requirements",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "website_display_section",
+   "fieldtype": "Section Break",
+   "label": "Website Display Options",
+   "description": "Tick the details to display on this published profile. Unticked details and empty fields stay off the website.",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "show_club_category",
+   "fieldtype": "Check",
+   "label": "Show Category on Website",
+   "default": "1"
+  },
+  {
+   "fieldname": "show_campus",
+   "fieldtype": "Check",
+   "label": "Show Campus on Website",
+   "default": "1"
+  },
+  {
+   "fieldname": "show_logo",
+   "fieldtype": "Check",
+   "label": "Show Club Logo on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_cover_photo",
+   "fieldtype": "Check",
+   "label": "Show Cover Photo on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_mission",
+   "fieldtype": "Check",
+   "label": "Show Mission on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_objectives",
+   "fieldtype": "Check",
+   "label": "Show Objectives on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_club_motto",
+   "fieldtype": "Check",
+   "label": "Show Club Motto on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_activities_summary",
+   "fieldtype": "Check",
+   "label": "Show Activities and Projects on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_achievements_summary",
+   "fieldtype": "Check",
+   "label": "Show Club Achievements on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "website_options_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "show_membership_requirements",
+   "fieldtype": "Check",
+   "label": "Show Membership Requirements on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_meeting_venue",
+   "fieldtype": "Check",
+   "label": "Show Meeting Venue on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_meeting_schedule",
+   "fieldtype": "Check",
+   "label": "Show Meeting Schedule on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_academic_year",
+   "fieldtype": "Check",
+   "label": "Show Academic Year on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_max_membership",
+   "fieldtype": "Check",
+   "label": "Show Membership Capacity on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_patron",
+   "fieldtype": "Check",
+   "label": "Show Club Patron on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_student_president",
+   "fieldtype": "Check",
+   "label": "Show Student President on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_members",
+   "fieldtype": "Check",
+   "label": "Show Member Roster on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "publication_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Publication"
   }
  ],
  "has_web_view": 1,

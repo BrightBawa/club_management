@@ -1,18 +1,31 @@
-{% extends "templates/web.html" %}
+{% extends "templates/clubs_web.html" %}
 
 {% block page_content %}
-{% include "templates/includes/clubs/styles.html" %}
-<section class="clubs-site">
-  <div class="clubs-hero">
-    <h1>Club Patrons</h1>
-  </div>
+<section class="clubs-site" aria-labelledby="club-patrons-title">
+  <header class="clubs-header">
+    <p class="clubs-eyebrow">{{ _("GCIHS Clubs & Activities") }}</p>
+    <h1 id="club-patrons-title">{{ _("Meet our patrons") }}</h1>
+    <p>{{ _("The people guiding our students in discovery, leadership, and service.") }}</p>
+  </header>
+  {% set directory = 'patrons' %}
+  {% include "templates/includes/clubs/navigation.html" %}
+  {% if patrons %}
   <div class="clubs-grid">
     {% for patron in patrons %}
     <article class="clubs-card">
-      <h3><a href="/{{ patron.route }}">{{ patron.public_name }}</a></h3>
-      <p class="clubs-meta">{{ patron.clubs_supervised or "" }}</p>
+      {% if patron.profile_photo %}<img class="clubs-card-photo" src="{{ patron.profile_photo |e }}" alt="" loading="lazy" decoding="async">{% endif %}
+      <h2><a href="/{{ patron.route |e }}">{{ patron.public_name |e }}</a></h2>
+      {% if patron.designation %}<p class="clubs-role">{{ patron.designation |e }}</p>{% endif %}
+      {% if patron.clubs_supervised %}<p class="clubs-meta">{{ patron.clubs_supervised |e }}</p>{% endif %}
+      <a class="clubs-card-action" href="/{{ patron.route |e }}">{{ _("View profile") }} &rarr;</a>
     </article>
     {% endfor %}
   </div>
+  {% else %}
+  <section class="clubs-empty">
+    <h2>{{ _("Patron profiles are coming soon") }}</h2>
+    <p>{{ _("Meet our club patrons here as their profiles are published.") }}</p>
+  </section>
+  {% endif %}
 </section>
 {% endblock %}

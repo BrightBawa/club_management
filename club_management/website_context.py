@@ -28,6 +28,15 @@ class PublicWebsiteGenerator(WebsiteGenerator):
 
         return self.has_permission(ptype=ptype, user=user, verbose=verbose)
 
+    def get_page_info(self):
+        # Frappe's allow_guest_to_view shortcut also matches draft routes whose
+        # publication checkbox is ticked. Enforce the full state before rendering.
+        if not self.is_website_published() and (
+            frappe.session.user == "Guest" or not self.has_permission("read")
+        ):
+            raise frappe.DoesNotExistError
+        return super().get_page_info()
+
 
 def get_query_value(key: str, default: str = "") -> str:
     return cstr(frappe.form_dict.get(key) or default).strip()

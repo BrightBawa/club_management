@@ -1,25 +1,34 @@
-{% extends "templates/web.html" %}
+{% extends "templates/clubs_web.html" %}
 
 {% block page_content %}
-{% include "templates/includes/clubs/styles.html" %}
-<section class="clubs-site">
-  <div class="clubs-hero">
-    <h1>Clubs & Activities</h1>
-    <p>Published clubs, member profiles, and patron profiles.</p>
-  </div>
-
+<section class="clubs-site" aria-labelledby="clubs-title">
+  <header class="clubs-header">
+    <p class="clubs-eyebrow">{{ _("GCIHS Student Life") }}</p>
+    <h1 id="clubs-title">{{ _("Clubs & activities") }}</h1>
+    <p>{{ website_introduction |e }}</p>
+  </header>
+  {% set directory = 'clubs' %}
+  {% include "templates/includes/clubs/navigation.html" %}
   {% if clubs %}
   <div class="clubs-grid">
     {% for club in clubs %}
     <article class="clubs-card">
-      <h3><a href="/{{ club.route }}">{{ club.club_name }}</a></h3>
-      <p class="clubs-meta">{{ club.club_category or "" }}</p>
-      {% if club.description %}<p>{{ club.description | striptags | truncate(180) }}</p>{% endif %}
+      {% if club.cover_photo %}<img class="clubs-card-cover" src="{{ club.cover_photo |e }}" alt="" loading="lazy" decoding="async">{% endif %}
+      {% if club.logo %}<img class="clubs-logo" src="{{ club.logo |e }}" alt="" loading="lazy" decoding="async">{% endif %}
+      <h2><a href="/{{ club.route |e }}">{{ club.club_name |e }}</a></h2>
+      {% if club.category %}<p class="clubs-meta">{{ club.category |e }}</p>{% endif %}
+      {% if club.description %}<p>{{ club.description |striptags |truncate(180) |e }}</p>{% endif %}
+      <a class="clubs-card-action" href="/{{ club.route |e }}">{{ _("Explore club") }} &rarr;</a>
     </article>
     {% endfor %}
   </div>
   {% else %}
-  <p>No clubs are published yet.</p>
+  <section class="clubs-empty" aria-labelledby="club-formation-title">
+    <p class="clubs-eyebrow">{{ _("Coming soon") }}</p>
+    <h2 id="club-formation-title">{{ _("Clubs are taking shape") }}</h2>
+    <p>{{ club_formation_message |e }}</p>
+    <p class="clubs-meta">{{ _("Club activities, patrons, and membership information will be shared as profiles are approved.") }}</p>
+  </section>
   {% endif %}
 </section>
 {% endblock %}

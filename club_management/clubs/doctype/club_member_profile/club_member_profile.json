@@ -15,6 +15,24 @@
   "interests",
   "skills",
   "public_photo",
+  "additional_details_section",
+  "achievements_summary",
+  "personal_goals",
+  "contribution_summary",
+  "website_display_section",
+  "show_public_photo",
+  "show_program",
+  "show_student_group",
+  "show_campus",
+  "show_interests",
+  "show_skills",
+  "website_options_column",
+  "show_achievements_summary",
+  "show_personal_goals",
+  "show_contribution_summary",
+  "show_memberships",
+  "show_membership_roles",
+  "publication_settings_section",
   "slug",
   "route",
   "membership_status",
@@ -74,7 +92,9 @@
   {
    "fieldname": "public_photo",
    "fieldtype": "Attach Image",
-   "label": "Public Photo"
+   "label": "Public Photo",
+   "make_attachment_public": 1,
+   "description": "Use a public image and tick its option under Website Display Options to display it on the published profile."
   },
   {
    "fieldname": "slug",
@@ -102,7 +122,8 @@
    "fieldname": "profile_visibility",
    "fieldtype": "Select",
    "label": "Profile Visibility",
-   "options": "\nInternal Only\nLogged-in School Community\nPublic Summary\nFully Published"
+   "options": "\nInternal Only\nLogged-in School Community\nPublic Summary\nFully Published",
+   "description": "Public member profiles also require Public Member Profiles Enabled in Club Settings."
   },
   {
    "default": "0",
@@ -122,6 +143,109 @@
    "fieldtype": "Datetime",
    "label": "Published On",
    "read_only": 1
+  },
+  {
+   "fieldname": "additional_details_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Profile Details",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "achievements_summary",
+   "label": "Achievements",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "personal_goals",
+   "label": "Personal Goals",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "contribution_summary",
+   "label": "Club Contributions",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "website_display_section",
+   "fieldtype": "Section Break",
+   "label": "Website Display Options",
+   "description": "Tick the details to display on this published profile. Unticked details and empty fields stay off the website.",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "show_public_photo",
+   "fieldtype": "Check",
+   "label": "Show Profile Photo on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_program",
+   "fieldtype": "Check",
+   "label": "Show Program on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_student_group",
+   "fieldtype": "Check",
+   "label": "Show Student Group on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_campus",
+   "fieldtype": "Check",
+   "label": "Show Campus on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_interests",
+   "fieldtype": "Check",
+   "label": "Show Interests on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_skills",
+   "fieldtype": "Check",
+   "label": "Show Skills on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "website_options_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "show_achievements_summary",
+   "fieldtype": "Check",
+   "label": "Show Achievements on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_personal_goals",
+   "fieldtype": "Check",
+   "label": "Show Personal Goals on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_contribution_summary",
+   "fieldtype": "Check",
+   "label": "Show Club Contributions on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_memberships",
+   "fieldtype": "Check",
+   "label": "Show Club Memberships on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_membership_roles",
+   "fieldtype": "Check",
+   "label": "Show Membership Roles on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "publication_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Publication"
   }
  ],
  "has_web_view": 1,

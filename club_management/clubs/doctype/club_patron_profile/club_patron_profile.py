@@ -10,6 +10,12 @@ from club_management.utils.document_helpers import (
     validate_publication_state,
     validate_required_fields_for_publication,
 )
+from club_management.utils.public_profiles import (
+    get_public_details,
+    get_public_patron_clubs,
+    selected_image,
+    validate_optional_public_images,
+)
 from club_management.website_context import PublicWebsiteGenerator
 
 
@@ -41,9 +47,14 @@ class ClubPatronProfile(PublicWebsiteGenerator):
             required_fields=("route",),
             require_one_of=("biography", "relevant_skills"),
         )
+        validate_optional_public_images(self, ("photograph",))
 
     def get_context(self, context):
         context.no_cache = 1
         context.title = self.public_name
         context.parents = [{"name": "Club Patrons", "route": "/club-patrons"}]
+        context.public_details = get_public_details(self)
+        context.profile_photo = selected_image(self, "photograph")
+        context.designation = self.designation if self.get("show_designation") else None
+        context.clubs = get_public_patron_clubs(self)
         return context

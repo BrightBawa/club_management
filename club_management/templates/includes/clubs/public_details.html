@@ -1,0 +1,13 @@
+{% if public_details %}
+<section class="clubs-panel clubs-public-details" aria-labelledby="club-details-title">
+  <h2 id="club-details-title">{{ _("Profile details") }}</h2>
+  <dl class="clubs-facts">
+    {% for detail in public_details %}
+    <div>
+      <dt>{{ detail.label |e }}</dt>
+      <dd>{% if detail.route %}<a href="/{{ detail.route |e }}">{{ detail.value |e }}</a>{% else %}{{ detail.value |e }}{% endif %}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+{% endif %}

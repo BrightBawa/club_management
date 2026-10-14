@@ -1,12 +1,38 @@
-{% extends "templates/web.html" %}
+{% extends "templates/clubs_web.html" %}
 
 {% block page_content %}
-{% include "templates/includes/clubs/styles.html" %}
-<section class="clubs-site">
-  <div class="clubs-hero">
-    <h1>{{ doc.club_name }}</h1>
-    <p class="clubs-meta">{{ doc.club_category or "" }}{% if doc.campus %} · {{ doc.campus }}{% endif %}</p>
-    {% if doc.description %}<div>{{ doc.description }}</div>{% endif %}
-  </div>
-</section>
+<article class="clubs-site" aria-labelledby="school-club-name">
+  <a class="clubs-back" href="/clubs">&larr; {{ _("All clubs") }}</a>
+  <header class="clubs-header">
+    <p class="clubs-eyebrow">{{ _("GCIHS Clubs & Activities") }}</p>
+    <div class="clubs-title-row">
+      {% if club_logo %}<img class="clubs-logo" src="{{ club_logo |e }}" alt="" decoding="async">{% endif %}
+      <div>
+        <h1 id="school-club-name">{{ doc.club_name |e }}</h1>
+        {% if category %}<p class="clubs-role">{{ category |e }}</p>{% endif %}
+      </div>
+    </div>
+    {% if cover_photo %}<img class="clubs-cover" src="{{ cover_photo |e }}" alt="{{ doc.club_name |e }}" decoding="async">{% endif %}
+  </header>
+  {% if doc.description %}
+  <section class="clubs-panel" aria-labelledby="club-about-title">
+    <h2 id="club-about-title">{{ _("About the club") }}</h2>
+    <div class="clubs-rich-text">{{ doc.description }}</div>
+  </section>
+  {% endif %}
+  {% include "templates/includes/clubs/public_details.html" %}
+  {% if members %}
+  <section class="clubs-related" aria-labelledby="club-members-title">
+    <h2 id="club-members-title">{{ _("Members") }}</h2>
+    <div class="clubs-grid">
+      {% for member in members %}
+      <article class="clubs-card">
+        <h3><a href="/{{ member.route |e }}">{{ member.public_name |e }}</a></h3>
+        {% if member.position %}<p class="clubs-meta">{{ member.position |e }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>
 {% endblock %}

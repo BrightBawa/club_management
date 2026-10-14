@@ -12,6 +12,25 @@
   "clubs_supervised",
   "biography",
   "relevant_skills",
+  "additional_details_section",
+  "designation",
+  "qualifications",
+  "experience",
+  "mentoring_approach",
+  "achievements_summary",
+  "languages",
+  "website_display_section",
+  "show_photograph",
+  "show_designation",
+  "show_clubs_supervised",
+  "show_relevant_skills",
+  "show_qualifications",
+  "website_options_column",
+  "show_experience",
+  "show_mentoring_approach",
+  "show_achievements_summary",
+  "show_languages",
+  "publication_settings_section",
   "contact_visibility",
   "slug",
   "route",
@@ -36,7 +55,9 @@
   {
    "fieldname": "photograph",
    "fieldtype": "Attach Image",
-   "label": "Photograph"
+   "label": "Photograph",
+   "make_attachment_public": 1,
+   "description": "Use a public image and tick its option under Website Display Options to display it on the published profile."
   },
   {
    "fieldname": "clubs_supervised",
@@ -92,6 +113,112 @@
    "fieldtype": "Datetime",
    "label": "Published On",
    "read_only": 1
+  },
+  {
+   "fieldname": "additional_details_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Profile Details",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "designation",
+   "label": "Designation",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "qualifications",
+   "label": "Professional Qualifications",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "experience",
+   "label": "Mentoring Experience",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "mentoring_approach",
+   "label": "Mentoring Approach",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "achievements_summary",
+   "label": "Achievements",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "languages",
+   "label": "Languages",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "website_display_section",
+   "fieldtype": "Section Break",
+   "label": "Website Display Options",
+   "description": "Tick the details to display on this published profile. Unticked details and empty fields stay off the website.",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "show_photograph",
+   "fieldtype": "Check",
+   "label": "Show Profile Photo on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_designation",
+   "fieldtype": "Check",
+   "label": "Show Designation on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_clubs_supervised",
+   "fieldtype": "Check",
+   "label": "Show Clubs Supervised on Website",
+   "default": "1"
+  },
+  {
+   "fieldname": "show_relevant_skills",
+   "fieldtype": "Check",
+   "label": "Show Relevant Skills on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_qualifications",
+   "fieldtype": "Check",
+   "label": "Show Professional Qualifications on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "website_options_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "show_experience",
+   "fieldtype": "Check",
+   "label": "Show Mentoring Experience on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_mentoring_approach",
+   "fieldtype": "Check",
+   "label": "Show Mentoring Approach on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_achievements_summary",
+   "fieldtype": "Check",
+   "label": "Show Achievements on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_languages",
+   "fieldtype": "Check",
+   "label": "Show Languages on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "publication_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Publication"
   }
  ],
  "has_web_view": 1,
